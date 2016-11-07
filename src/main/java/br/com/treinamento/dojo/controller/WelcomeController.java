@@ -6,7 +6,6 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import br.com.treinamento.dojo.service.MarvelRequestSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +21,7 @@ public class WelcomeController {
 
 	@RequestMapping(value = "/helloworld", method = RequestMethod.GET)
 	public String helloWorld() {
-		return sender.sendRequest("https://gateway.marvel.com:443/v1/public/characters");
+		return "Hello World";
 	}
 
 }
